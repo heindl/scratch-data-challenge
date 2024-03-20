@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  fmt:
+    cmds:
+      - go fmt ./...
+      - goimports -w . ./internal
+
+  lint:
+    cmds:
+      - go vet ./...
+      - golangci-lint run --fix ./...
+
+  test:
+    cmds:
+      - go test ./internal
+
+  test:bench:
+    cmds:
+      - go test -bench=. ./internal

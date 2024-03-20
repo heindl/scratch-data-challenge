@@ -1,0 +1,6 @@
+.task/
+Taskfile.yml
+.golangci.yml
+.dockerignore
+Dockerfile
+*_test.go
